@@ -58,19 +58,20 @@ export default function Blog({
               Most Popular
             </h3>
             <BlogPost
-              title="Rust Is The Future of JavaScript Infrastructure"
-              excerpt="Why is Rust being used to replace parts of the JavaScript web ecosystem like minification (Terser), transpilation (Babel), formatting (Prettier), bundling (webpack), linting (ESLint), and more?"
-              slug="rust"
+              title="Ajax Powered Cart Items Count In WooCommerce"
+              excerpt="
+              The easiest way to dynamically increase your WooCommerce mini cart count, follow this tutorial to learn more..."
+              slug="ajax-based-woocommerce-cart-count"
             />
             <BlogPost
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-              excerpt="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
-              slug="style-guides-component-libraries-design-systems"
+              title="Loop Through Custom Post Type, With Custom Taxonomy In WordPress"
+              excerpt="Loops through any terms assigned to the custom post type and displays them on the page. The below code is a pretty simple way to do this with a custom theme."
+              slug="wordpress-custom-post-type-loop"
             />
             <BlogPost
-              title="Building a Design System Monorepo with Turborepo"
-              excerpt="Manage multiple packages with a shared build, test, and release process using Turborepo, Changesets, Storybook, and more."
-              slug="turborepo-design-system-monorepo"
+              title="Easy Steps To Add Dynamic Logo In WordPress, With Custom Themes"
+              excerpt="If you are developing a WordPress theme and want to give end-users the option to add their own custom logo, just follow along with this step-by-step guide."
+              slug="add-dynamic-logo-wordpress"
             />
           </>
         )}
@@ -100,5 +101,8 @@ export default function Blog({
 export async function getStaticProps({ preview = false }) {
   const posts: Post[] = await getClient(preview).fetch(indexQuery);
 
-  return { props: { posts }, revalidate: 60 };
+  return {
+    props: { posts },
+    revalidate: process.env.SANITY_REVALIDATE_SECRET ? undefined : 60
+  };
 }

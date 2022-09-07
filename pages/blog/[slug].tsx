@@ -58,6 +58,6 @@ export async function getStaticProps({ params, preview = false }) {
         readingTime
       }
     },
-    revalidate: 60
+    revalidate: process.env.SANITY_REVALIDATE_SECRET ? undefined : 60
   };
 }
