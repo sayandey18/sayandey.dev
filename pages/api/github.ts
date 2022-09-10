@@ -13,8 +13,10 @@ export default async function handler(req: NextRequest) {
   const user = await userResponse.json();
   const repositories = await userReposResponse.json();
 
-  const mine = repositories.filter((repo) => !repo.fork);
-  const stars = mine.reduce((accumulator, repository) => {
+  const mine = repositories
+    .filter((repo: { fork: boolean }) => !repo.fork)
+    .slice(0, Number(100));
+  const stars = mine.reduce((accumulator: any, repository: any) => {
     return accumulator + repository['stargazers_count'];
   }, 0);
 
