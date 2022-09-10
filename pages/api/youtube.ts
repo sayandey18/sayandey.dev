@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { google } from 'googleapis';
 
 import googleAuth from 'lib/google';
+import { version } from 'react';
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,7 +10,7 @@ export default async function handler(
 ) {
   const auth = await googleAuth.getClient();
   const youtube = google.youtube({
-    auth,
+    auth: process.env.GOOGLE_API_KEY,
     version: 'v3'
   });
 
