@@ -15,8 +15,8 @@ export default async function handler(
   });
 
   const response = await youtube.channels.list({
-    id: 'UCGc7G2cwRBzasx0gCdfz8Lw',
-    part: 'statistics'
+    part: ['statistics'],
+    id: ['UCGc7G2cwRBzasx0gCdfz8Lw']
   });
 
   const channel = response.data.items[0];
