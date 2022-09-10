@@ -22,12 +22,7 @@ export default function Dashboard() {
             This is my personal dashboard, built with Next.js API routes
             deployed as serverless functions. I use this dashboard to track
             various metrics across platforms like Unsplash, YouTube, GitHub, and
-            more. Want to build your own? Check out my&nbsp;
-            <Link href="/blog/fetching-data-with-swr">
-              <a className="text-gray-900 dark:text-gray-100 underline">
-                blog series.
-              </a>
-            </Link>
+            more.
           </p>
         </div>
         <div className="flex flex-col w-full">
