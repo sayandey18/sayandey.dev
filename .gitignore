@@ -1,7 +1,22 @@
-*.log
-.DS_Store
-.next
+# dependencies
 node_modules
-.vercel
+
+# next.js
+.next
+.swc
+out
+
+# local env files
 .env
+
+# sanity
 .sanity
+dist
+
+# misc
+.DS_Store
+.vercel
+*.pem
+
+# debug
+*.log

@@ -11,14 +11,18 @@ async function stringifyRequest(req: NextApiRequest) {
   return Buffer.concat(chunks).toString('utf8');
 }
 
+export const config = {
+  api: {
+    bodyParser: false
+  }
+};
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (!process.env.SANITY_STUDIO_REVALIDATE_SECRET) {
-    return res
-      .status(500)
-      .json({ message: 'Missing sanity studio revalidate secret' });
+    return res.status(500).json({ message: 'Missing revalidate secret' });
   }
 
   const signature = req.headers[SIGNATURE_HEADER_NAME]?.toString();
@@ -35,7 +39,9 @@ export default async function handler(
       process.env.SANITY_STUDIO_REVALIDATE_SECRET
     )
   ) {
-    return res.status(401).json({ message: 'Invalid request' });
+    return res
+      .status(401)
+      .json({ success: false, message: 'Invalid signature' });
   }
 
   const { _id: id } = JSON.parse(stringifiedRequest);
@@ -52,7 +58,7 @@ export default async function handler(
 
     return res
       .status(200)
-      .json({ message: `[Revalidated] '${pathToRevalidate}' (${id})`, revalidated: true });
+      .json({ message: `[Revalidated] '${pathToRevalidate}' (${id})` });
   } catch (err) {
     if (err instanceof Error) {
       return res.status(500).json({ message: err.message });
