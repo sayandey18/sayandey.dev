@@ -1,17 +1,29 @@
-import { type NextRequest } from 'next/server';
+import type { NextApiRequest } from 'next';
 import { getTopTracks } from 'lib/spotify';
 
-export const config = {
-  runtime: 'experimental-edge'
+type ResponseTrackType = {
+  artists: {
+    name: string;
+  }[];
+  name: string;
+  external_urls: {
+    spotify: string;
+  };
+  album: {
+    images: {
+      url: string;
+    }[];
+  };
 };
 
-export default async function handler(req: NextRequest) {
+export default async function handler(req: NextApiRequest) {
   const response = await getTopTracks();
   const { items } = await response.json();
 
-  const tracks = items.slice(0, 10).map((track) => ({
+  const tracks = items.reverse().slice(0, 10).map((track: ResponseTrackType) => ({
     artist: track.artists.map((_artist) => _artist.name).join(', '),
     songUrl: track.external_urls.spotify,
+    cover: track.album.images[1]?.url,
     title: track.name
   }));
 
@@ -23,3 +35,7 @@ export default async function handler(req: NextRequest) {
     }
   });
 }
+
+export const config = {
+  runtime: 'experimental-edge'
+};
