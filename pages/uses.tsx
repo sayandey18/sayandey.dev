@@ -27,9 +27,9 @@ export default function Uses() {
           <h3 id="computer-office">Computer / Office</h3>
           <ul>
             <li>Intel Core i5 12400F Processor</li>
-            <li>Asus TUF GeForce GTX 1660 Super OC Edition</li>
+            <li>Asus TUF GeForce GTX 1660 Super</li>
             <li>Acer Nitro 23.8&quot; Gaming Monitor</li>
-            <li>Cosmic Byte CB-GK-02 Corona Gaming Keyboard</li>
+            <li>Cosmic Byte CB-GK-02 Gaming Keyboard</li>
             <li>Logitech G G102 Gaming Mouse</li>
           </ul>
           <h3 id="coding">Coding</h3>
@@ -47,6 +47,7 @@ export default function Uses() {
             <li>Postman</li>
             <li>Canva</li>
             <li>Grammarly</li>
+            <li>PhonePe</li>
             <li>Groww</li>
             <li>CRED</li>
           </ul>
@@ -54,7 +55,7 @@ export default function Uses() {
           <ul>
             <li>IQOO Neo 6</li>
             <li>Realme Watch 2 Pro</li>
-            <li>DEFY Gravity Z</li>
+            <li>DEFY GravityZ</li>
           </ul>
         </div>
       </article>
