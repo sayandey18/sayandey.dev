@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         'blue-opaque': 'rgb(13 42 148 / 18%)',
+        'black-ebony': 'rgb(22 22 24 / 95%)',
+        'black-charcoal': 'rgb(33 33 33 / 90%)',
+        'frost-effect': 'rgb(249 250 251/ 50%)',
+        'frost-effect-dark': 'rgb(17 17 17 / 50%)',
         gray: {
           0: '#fff',
           100: '#fafafa',

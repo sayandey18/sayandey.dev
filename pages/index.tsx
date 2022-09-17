@@ -4,15 +4,16 @@ import Link from 'next/link';
 
 import Container from '../components/Container';
 import BlogPostCard from '../components/BlogPostCard';
+import Timeline from 'components/Timeline';
 import Subscribe from '../components/Subscribe';
 
 export default function Home() {
   return (
     <Suspense fallback={null}>
       <Container>
-        <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col justify-center items-start max-w-[45rem] border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col-reverse sm:flex-row items-start">
-            <div className="flex flex-col pr-8">
+            <div className="flex flex-col basis-2/3 justify-start pr-8">
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
                 Sayan Dey
               </h1>
@@ -26,7 +27,7 @@ export default function Home() {
                 coding layouts.
               </p>
             </div>
-            <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
+            <div className="flex basis-1/3 justify-end w-[100px] sm:w-[170px] mb-8 sm:mb-0">
               <Image
                 alt="Sayan Dey"
                 height={176}
@@ -80,6 +81,11 @@ export default function Home() {
           </Link>
 
           <span className="h-10" />
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+            Life Journey
+          </h3>
+
+          <Timeline />
 
           <div className="w-full">
             <ol className="overflow-hidden text-sm border border-blue-100 dark:border-gray-800 rounded-lg grid grid-cols-1 divide-gray-100 sm:grid-cols-3">
@@ -100,8 +106,12 @@ export default function Home() {
                 </svg>
 
                 <p className="leading-none pl-1.5">
-                  <strong className="block text-base font-semibold dark:text-gray-100">Think</strong>
-                  <small className="text-gray-600 dark:text-gray-200 text-sm mt-1">Innovative idea's.</small>
+                  <strong className="block text-base font-semibold dark:text-gray-100">
+                    Think
+                  </strong>
+                  <small className="text-gray-600 dark:text-gray-200 text-sm mt-1">
+                    Innovative idea's.
+                  </small>
                 </p>
               </li>
 
@@ -126,8 +136,12 @@ export default function Home() {
                 </svg>
 
                 <p className="leading-none pl-1.5">
-                  <strong className="block text-base font-semibold">Code</strong>
-                  <small className="text-gray-600 text-sm mt-1">Utilize on VSCode.</small>
+                  <strong className="block text-base font-semibold">
+                    Code
+                  </strong>
+                  <small className="text-gray-600 text-sm mt-1">
+                    Utilize on VSCode.
+                  </small>
                 </p>
               </li>
 
@@ -148,14 +162,19 @@ export default function Home() {
                 </svg>
 
                 <p className="leading-none pl-1.5">
-                  <strong className="block text-base font-semibold dark:text-gray-100">Deploy</strong>
-                  <small className="text-gray-600 dark:text-gray-200 text-sm mt-1">Push it on Server.</small>
+                  <strong className="block text-base font-semibold dark:text-gray-100">
+                    Deploy
+                  </strong>
+                  <small className="text-gray-600 dark:text-gray-200 text-sm mt-1">
+                    Push it on Server.
+                  </small>
                 </p>
               </li>
             </ol>
           </div>
 
           <span className="h-10" />
+
           <Subscribe />
         </div>
       </Container>
