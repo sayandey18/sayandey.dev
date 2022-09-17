@@ -88,7 +88,7 @@ export default function Guestbook({ fallbackData }) {
 
   return (
     <>
-      <div className="border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-blue-opaque">
+      <div className="border border-blue-200 rounded p-6 my-4 w-full dark:border-gray-800 bg-blue-50 dark:bg-black-charcoal">
         <h5 className="text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100">
           Sign the Guestbook
         </h5>
@@ -99,7 +99,7 @@ export default function Guestbook({ fallbackData }) {
           // eslint-disable-next-line @next/next/no-html-link-for-pages
           <a
             href="/api/auth/signin/github"
-            className="text-white bg-[#24292F] hover:bg-[#24292F]/90 font-medium text-sm rounded h-8 inline-flex items-center dark:hover:bg-[#050708]/30 px-5 mb-2"
+            className="text-white bg-black-ebony font-medium text-sm rounded h-8 inline-flex items-center dark:bg-gray-200 dark:text-gray-900 px-5 mb-2"
             onClick={(e) => {
               e.preventDefault();
               signIn('github');

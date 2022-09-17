@@ -7,7 +7,7 @@ export default function Uses() {
       title="Uses – Sayan Dey"
       description="Here's what tech I'm currently using for coding, videos, and music."
     >
-      <article className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 w-full">
+      <article className="flex flex-col justify-center items-start max-w-[45rem] mx-auto mb-16 w-full">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           My Gear
         </h1>
@@ -30,7 +30,7 @@ export default function Uses() {
             <li>Asus TUF GeForce GTX 1660 Super</li>
             <li>Acer Nitro 23.8&quot; Gaming Monitor</li>
             <li>Cosmic Byte CB-GK-02 Gaming Keyboard</li>
-            <li>Logitech G G102 Gaming Mouse</li>
+            <li>Logitech G102 Gaming Mouse</li>
           </ul>
           <h3 id="coding">Coding</h3>
           <ul>
