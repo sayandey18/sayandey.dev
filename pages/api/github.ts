@@ -5,9 +5,21 @@ export const config = {
 };
 
 export default async function handler(req: NextRequest) {
-  const userResponse = await fetch('https://api.github.com/users/sayandey18');
+  const userResponse = await fetch(`https://api.github.com/users/sayandey18`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Token ${process.env.GITHUB_ACCESS_TOKENS}`
+    }
+  });
+
   const userReposResponse = await fetch(
-    'https://api.github.com/users/sayandey18/repos?per_page=100'
+    `https://api.github.com/users/sayandey18/repos?per_page=100`,
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Token ${process.env.GITHUB_ACCESS_TOKENS}`
+      }
+    }
   );
 
   const user = await userResponse.json();
