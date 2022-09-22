@@ -1,7 +1,6 @@
 import { createConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { media } from 'sanity-plugin-media';
-import { visionTool } from '@sanity/vision';
 import { markdownSchema } from 'sanity-plugin-markdown';
 
 export default createConfig({
@@ -9,15 +8,7 @@ export default createConfig({
   title: 'sayandey.dev',
   projectId: 'q0pwph59',
   dataset: 'production',
-  plugins: [
-    deskTool(),
-    media(),
-    markdownSchema(),
-    visionTool({
-      defaultApiVersion: "2022-08-15",
-      defaultDataset: "production",
-    }),
-  ],
+  plugins: [deskTool(), media(), markdownSchema()],
   schema: {
     types: [
       {
