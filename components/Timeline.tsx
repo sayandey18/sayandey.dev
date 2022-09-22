@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Divider = () => {
   return (
-    <div className="border border-gray-200 dark:border-gray-600 w-full my-8" />
+    <div className="border-b border-gray-200 dark:border-gray-600 w-full my-8" />
   );
 };
 

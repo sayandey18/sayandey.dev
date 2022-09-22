@@ -70,6 +70,18 @@ export type GitHub = {
   stars: number;
 };
 
+export type Projects = {
+  name: string;
+  html_url: string;
+  homepage: string;
+  description: string;
+  language: string;
+};
+
+export type Repositories = {
+  repos: Projects[];
+};
+
 export type Unsplash = {
   downloads: number;
   views: number;

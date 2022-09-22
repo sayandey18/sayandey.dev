@@ -40,13 +40,13 @@ export default function About() {
           <h2>Bio</h2>
           <h3>Job Title</h3>
           <p>Sayan Dey is the Web Developer at{' '}
-            <span className="font-semibold">Edology</span>
+            <span className="font-semibold text-blue-500">Edology</span>
           </p>
 
           <h3>Long, Description</h3>
           <p>
             I'm Sayan Dey, a self-taught passionate Web Developer from Kolkata, India. 
-            Currently working at{' '} Edology as Web Developer. I've been building stuff 
+            Currently working at Edology as Web Developer. I've been building stuff 
             on the web that are responsive, fast, easy to use, and built with best practices. 
             The main area of my expertise is building small and medium web apps, custom plugins, 
             features, animations, and interactive coding layouts.
@@ -54,7 +54,7 @@ export default function About() {
 
           <h3>Short, Description</h3>
           <p>
-            Hey, I'm Sayan. I'm the Web Developer at{' '} Edology,
+            Hey, I'm Sayan. I'm the Web Developer at Edology,
             where my team helps businesses build the web faster.
           </p>
 

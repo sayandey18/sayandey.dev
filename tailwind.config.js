@@ -24,6 +24,9 @@ module.exports = {
           900: '#111111'
         }
       },
+      boxShadow: {
+        'soft-shadow': '0 2px 16px rgb(95 95 95 / 10%)'
+      },
       fontFamily: {
         sans: ['IBM Plex Sans', ...fontFamily.sans]
       },
