@@ -23,6 +23,7 @@ export async function getServerSideProps({ res }) {
       'about',
       'blog',
       'dashboard',
+      'projects',
       'guestbook',
       'newsletter',
       'tweets',
