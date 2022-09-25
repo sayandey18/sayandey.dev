@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blue-opaque': 'rgb(13 42 148 / 18%)',
         'black-ebony': 'rgb(22 22 24 / 95%)',
         'black-charcoal': 'rgb(33 33 33 / 90%)',
         'frost-effect': 'rgb(249 250 251/ 50%)',
@@ -25,7 +24,7 @@ module.exports = {
         }
       },
       boxShadow: {
-        'soft-shadow': '0 2px 16px rgb(95 95 95 / 10%)'
+        '3xl': '0 2px 16px rgb(95 95 95 / 10%)'
       },
       fontFamily: {
         sans: ['IBM Plex Sans', ...fontFamily.sans]

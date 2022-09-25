@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import fetcher from 'lib/fetcher';
 import type { Repositories } from 'lib/types';
 import ProjectError from './ProjectError';
+import ProjectLoading from './ProjectLoading';
 
 export default function ProjectCard() {
   const { data, error } = useSWR<Repositories>(
@@ -14,7 +15,7 @@ export default function ProjectCard() {
     return <ProjectError />;
   }
   if (!data) {
-    return <ProjectError />;
+    return <ProjectLoading />;
   }
 
   return (
@@ -23,7 +24,7 @@ export default function ProjectCard() {
         <div
           key={index}
           id={repo.name}
-          className="item flex flex-wrap items-center rounded-lg text-gray-800 dark:text-gray-200 dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] p-6 md:h-32 gap-y-4 w-full"
+          className="item flex flex-wrap items-center rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-black-charcoal shadow-3xl p-6 md:h-32 gap-y-4 w-full"
         >
           <div className="flex justify-center basis-full md:basis-1/5">
             <p className="font-bold sm:font-semibold">{repo.name}</p>

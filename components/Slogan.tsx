@@ -2,7 +2,7 @@ export default function Slogan() {
   return (
     <div className="w-full">
       <ol className="overflow-hidden text-sm border border-blue-100 dark:border-gray-800 rounded-lg grid grid-cols-1 divide-gray-100 sm:grid-cols-3">
-        <li className="flex items-center justify-center text-gray-900 dark:text-gray-100 p-4">
+        <li className="flex items-center justify-center text-gray-900 dark:bg-black-charcoal dark:text-gray-100 p-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -28,10 +28,9 @@ export default function Slogan() {
           </p>
         </li>
 
-        <li className="relative flex items-center justify-center text-gray-900 p-4 bg-blue-50">
-          <span className="absolute hidden w-4 h-4 border border-b-0 border-l-0 border-gray-100 rotate-45 -translate-y-1/2 sm:block bg-gray-50 -left-2 top-1/2"></span>
-
-          <span className="absolute hidden w-4 h-4 border border-b-0 border-l-0 border-gray-100 rotate-45 -translate-y-1/2 sm:block bg-gray-50 -right-2 top-1/2"></span>
+        <li className="relative flex items-center justify-center text-gray-900 p-4 dark:bg-gray-200 bg-blue-50">
+          <span className="absolute hidden w-4 h-4 rotate-45 -translate-y-1/2 sm:block bg-blue-50 dark:bg-gray-200 -left-2 top-1/2"></span>
+          <span className="absolute hidden w-4 h-4 rotate-45 -translate-y-1/2 sm:block bg-blue-50 dark:bg-gray-200 -right-2 top-1/2"></span>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +55,7 @@ export default function Slogan() {
           </p>
         </li>
 
-        <li className="flex items-center justify-center text-gray-900 dark:text-gray-100 p-4">
+        <li className="flex items-center justify-center text-gray-900 dark:bg-black-charcoal dark:text-gray-100 p-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
