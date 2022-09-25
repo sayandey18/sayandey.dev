@@ -6,25 +6,22 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.query.secret !== process.env.SANITY_PREVIEW_SECRET) {
-    return res.status(401).json({ message: 'Invalid token' });
+  if (
+    req.query.secret !== process.env.SANITY_PREVIEW_SECRET ||
+    !req.query.slug
+  ) {
+    return res.status(401).json({ message: 'Invalid secret token' });
+  }
+
+  const post = await previewClient.fetch(postBySlugQuery, {
+    slug: req.query.slug
+  });
+
+  if (!post) {
+    return res.status(401).json({ message: 'Invalid slug' });
   }
 
   res.setPreviewData({});
-
-  if (req.query.slug) {
-    const post = await previewClient.fetch(postBySlugQuery, {
-      slug: req.query.slug
-    });
-
-    if (!post) {
-      return res.status(401).json({ message: 'Invalid slug' });
-    }
-
-    res.redirect(307, `/blog/${post.slug}`);
-  } else {
-    res.redirect(307, '/blog');
-  }
-
+  res.writeHead(307, { Location: `/blog/${post.slug}` });
   return res.end();
 }
