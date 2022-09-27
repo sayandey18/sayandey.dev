@@ -27,7 +27,7 @@ export default function Tweets({ tweets }) {
 
 export async function getStaticProps() {
   const tweets = await getTweets([
-    '1573039435217633280',
+    '1574500317105995782',
     '1564591280881025025',
     '1547218048410607616',
     '1559587281295605761',
