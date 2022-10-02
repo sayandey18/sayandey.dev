@@ -1,18 +1,28 @@
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
       'i.scdn.co', // Spotify Album Art
       'pbs.twimg.com', // Twitter Profile Picture
-      'cdn.sanity.io'
+      'cdn.sanity.io',
+      'activity-graph.herokuapp.com'
     ]
   },
   experimental: {
     legacyBrowsers: false,
     browsersListForSwc: true
+  },
+  async redirects() {
+    return [
+      {
+        source: '/analytics',
+        destination: 'https://analytics.sayandey.dev',
+        permanent: true
+      }
+    ];
   },
   async headers() {
     return [
@@ -26,15 +36,15 @@ module.exports = {
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com;
-    child-src *.youtube.com *.google.com *.twitter.com;
-    style-src 'self' 'unsafe-inline' *.googleapis.com;
-    img-src * blob: data:;
-    media-src 'none';
-    connect-src *;
-    font-src 'self';
-`;
+      default-src 'self';
+      script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.sayandey.dev;
+      child-src *.youtube.com *.google.com *.twitter.com;
+      style-src 'self' 'unsafe-inline' *.googleapis.com;
+      img-src * blob: data:;
+      media-src 'none';
+      connect-src *;
+      font-src 'self';
+  `;
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -73,3 +83,5 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=()'
   }
 ];
+
+export default nextConfig;
