@@ -1,4 +1,6 @@
 import Container from 'components/Container';
+import devtools from 'contents/UtilitiesData';
+import UtilitySection from 'components/UtilitySection';
 
 export default function Utilities() {
   return (
@@ -17,8 +19,10 @@ export default function Utilities() {
             always changing.
           </p>
         </div>
-        <div className="flex justify-start items-center w-full">
-          <p className="text-gray-900">Coming Soon...</p>
+        <div className="flex flex-col gap-14 w-full">
+          <UtilitySection utility={devtools.system} />
+          <UtilitySection utility={devtools.tools} />
+          <UtilitySection utility={devtools.software} />
         </div>
       </div>
     </Container>
