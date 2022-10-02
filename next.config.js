@@ -1,7 +1,7 @@
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   images: {
     domains: [
@@ -36,15 +36,15 @@ const nextConfig = {
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
-      default-src 'self';
-      script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.sayandey.dev;
-      child-src *.youtube.com *.google.com *.twitter.com;
-      style-src 'self' 'unsafe-inline' *.googleapis.com;
-      img-src * blob: data:;
-      media-src 'none';
-      connect-src *;
-      font-src 'self';
-  `;
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com *.sayandey.dev;
+    child-src *.youtube.com *.google.com *.twitter.com;
+    style-src 'self' 'unsafe-inline' *.googleapis.com;
+    img-src * blob: data:;
+    media-src 'none';
+    connect-src *;
+    font-src 'self';
+`;
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -83,5 +83,3 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=()'
   }
 ];
-
-export default nextConfig;
