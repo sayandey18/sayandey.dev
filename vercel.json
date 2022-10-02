@@ -39,6 +39,10 @@
       "destination": "https://www.youtube.com/channel/UCGc7G2cwRBzasx0gCdfz8Lw/live"
     },
     {
+      "source": "/static/media/Sayan-CV.e29bee641afb61cbc7aa.pdf",
+      "destination": "/sayandey-resume.pdf"
+    },
+    {
       "source": "/newsletter/(.*)",
       "destination": "/newsletter"
     },
