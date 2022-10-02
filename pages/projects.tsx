@@ -29,12 +29,19 @@ export default function Projects() {
           </div>
 
           <div className="w-full mb-8">
-            <a href="https://github.com/sayandey18" target="_blank" rel="noreferrer noopener">
+            <a
+              href="https://github.com/sayandey18"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image
                 alt="sayan github graph"
-                width={800}
-                height={400} className="border-4 border-gray-200 dark:border-white"
-                src="https://activity-graph.herokuapp.com/graph?username=sayandey18&theme=react"
+                className="border-4 border-gray-200 dark:border-white"
+                width={750}
+                height={300}
+                unoptimized
+                priority
+                src={`https://activity-graph.herokuapp.com/graph?username=sayandey18&theme=react`}
               />
             </a>
           </div>
