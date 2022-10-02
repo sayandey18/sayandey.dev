@@ -18,7 +18,7 @@ export const getTweets = async (ids) => {
     `https://api.twitter.com/2/tweets?${queryParams}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.TWITTER_API_KEY}`
+        Authorization: `Bearer ${process.env.TWITTER_BEARER_TOKEN}`
       }
     }
   );
