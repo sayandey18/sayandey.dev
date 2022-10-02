@@ -67,14 +67,8 @@ export default function Footer() {
               Tweets
             </a>
           </Link>
-          <Link href="/feed.xml">
-            <a className="text-gray-400 hover:text-gray-500 transition">Feed</a>
-          </Link>
-          <Link href="/sitemap.xml">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Sitemap
-            </a>
-          </Link>
+          <ExternalLink href="/feed.xml">Feed</ExternalLink>
+          <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>
           <ExternalLink href="https://analytics.sayandey.dev/share/heORd4RV/Sayan">
             Analytics
           </ExternalLink>
