@@ -1,2 +1,4 @@
 User-agent: *
+Disallow: /analytics
+
 Sitemap: https://sayandey.dev/sitemap.xml
