@@ -32,8 +32,8 @@ export default function Home() {
             <div className="flex basis-1/3 justify-end w-[100px] sm:w-[170px] mb-8 sm:mb-0">
               <Image
                 alt="Sayan Dey"
-                height={176}
-                width={176}
+                height={160}
+                width={160}
                 src="/avatar.jpg"
                 sizes="30vw"
                 priority
