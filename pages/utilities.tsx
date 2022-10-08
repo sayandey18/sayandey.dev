@@ -24,6 +24,12 @@ export default function Utilities() {
           <UtilitySection utility={devtools.tools} />
           <UtilitySection utility={devtools.software} />
         </div>
+        <div className="mt-10">
+          <p className="text-gray-600 dark:text-gray-400">
+            Last Update on{' '}
+            <span className="font-semibold">{devtools.lastUpdate}</span>
+          </p>
+        </div>
       </div>
     </Container>
   );
