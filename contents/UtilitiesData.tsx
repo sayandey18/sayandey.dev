@@ -4,6 +4,7 @@ import {
   SiBuffer,
   SiHyper,
   SiWindows,
+  SiDebian,
   SiMicrosoftedge,
   SiGooglechrome,
   SiReact,
@@ -21,6 +22,8 @@ import {
   SiSpotify,
   SiGrammarly,
   SiAdobephotoshop,
+  SiGoogledrive,
+  SiSkype,
   SiFilezilla
 } from 'react-icons/si';
 
@@ -57,9 +60,15 @@ const devtools = {
       },
       {
         name: 'Windows 10',
-        description: 'Operating System',
+        description: 'Primary Operating System',
         icon: SiWindows,
         link: 'https://www.microsoft.com/software-download/windows11'
+      },
+      {
+        name: 'Parrot OS',
+        description: 'Secondary Operating System',
+        icon: SiDebian,
+        link: 'https://www.parrotsec.org/download/'
       },
       {
         name: 'Microsoft Edge',
@@ -174,6 +183,18 @@ const devtools = {
         description: 'Raster Graphics Editor',
         icon: SiAdobephotoshop,
         link: 'https://www.adobe.com/in/products/photoshop.html'
+      },
+      {
+        name: 'Google Drive',
+        description: 'Store Important Files',
+        icon: SiGoogledrive,
+        link: 'https://drive.google.com'
+      },
+      {
+        name: 'Skype',
+        description: 'Office Communication',
+        icon: SiSkype,
+        link: 'https://www.skype.com/en/get-skype/'
       },
       {
         name: 'FileZilla',
