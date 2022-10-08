@@ -18,19 +18,21 @@ import {
   SiPnpm,
   SiYarn,
   SiPostman,
+  SiWappalyzer,
   SiBitwarden,
   SiSpotify,
   SiGrammarly,
   SiAdobephotoshop,
   SiGoogledrive,
   SiSkype,
+  SiOpenvpn,
   SiFilezilla
 } from 'react-icons/si';
 
 const devtools = {
   title: 'Utilities',
   description: 'The tools and software I currently use.',
-  lastUpdate: 'September 25, 2022',
+  lastUpdate: 'October 08, 2022',
   system: {
     title: 'System',
     data: [
@@ -114,7 +116,7 @@ const devtools = {
       },
       {
         name: 'Prettier',
-        description: 'For Code formatting',
+        description: 'For Code Formatting',
         icon: SiPrettier,
         link: 'https://prettier.io/'
       },
@@ -150,8 +152,14 @@ const devtools = {
       },
       {
         name: 'Postman',
-        description: 'For testing APIs',
+        description: 'For Testing APIs',
         icon: SiPostman,
+        link: 'https://www.postman.com/downloads/'
+      },
+      {
+        name: 'Wappalyzer',
+        description: 'To Detect Web Technology',
+        icon: SiWappalyzer,
         link: 'https://www.postman.com/downloads/'
       }
     ]
@@ -195,6 +203,12 @@ const devtools = {
         description: 'Office Communication',
         icon: SiSkype,
         link: 'https://www.skype.com/en/get-skype/'
+      },
+      {
+        name: 'OpenVPN',
+        description: 'For Secure Private Connection',
+        icon: SiOpenvpn,
+        link: 'https://openvpn.net/community-downloads/'
       },
       {
         name: 'FileZilla',
