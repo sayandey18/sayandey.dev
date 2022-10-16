@@ -4,7 +4,7 @@ import fetcher from 'lib/fetcher';
 import type { Repositories } from 'lib/types';
 import ProjectError from './ProjectError';
 import ProjectLoading from './ProjectLoading';
-import { GoHome, GoGitBranch } from 'react-icons/go';
+import { BiHomeAlt, BiGitBranch } from 'react-icons/bi';
 
 export default function ProjectCard() {
   const { data, error } = useSWR<Repositories>(
@@ -50,7 +50,7 @@ export default function ProjectCard() {
                 rel="noopener noreferrer"
                 aria-label="homepage"
               >
-                <GoHome className="h-6 w-6 text-gray-500 dark:text-gray-300" />
+                <BiHomeAlt className="h-6 w-6 text-gray-600 dark:text-gray-300" />
               </a>
             )}
 
@@ -61,7 +61,7 @@ export default function ProjectCard() {
               rel="noopener noreferrer"
               aria-label="github"
             >
-              <GoGitBranch className="h-6 w-6 text-gray-500 dark:text-gray-300" />
+              <BiGitBranch className="h-6 w-6 text-gray-600 dark:text-gray-300" />
             </a>
           </div>
         </div>
