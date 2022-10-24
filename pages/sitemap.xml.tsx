@@ -25,8 +25,10 @@ export async function getServerSideProps({ res }) {
       'dashboard',
       'projects',
       'utilities',
+      'resources',
       'guestbook',
       'newsletter',
+      'certificates',
       'tweets',
       'uses'
     ]
