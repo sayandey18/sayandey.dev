@@ -1,7 +1,7 @@
 export default function ProjectError() {
   return (
     <div className="flex flex-wrap w-full gap-y-5">
-      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-32">
+      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-28">
         <div className="flex justify-center items-center basis-1/5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export default function ProjectError() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-32">
+      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-28">
         <div className="flex justify-center items-center basis-1/5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function ProjectError() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-32">
+      <div className="flex flex-row justify-center animate-pulse dark:bg-black-charcoal shadow-3xl rounded-lg p-6 w-full h-28">
         <div className="flex justify-center items-center basis-1/5">
           <svg
             xmlns="http://www.w3.org/2000/svg"

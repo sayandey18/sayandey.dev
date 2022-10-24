@@ -3,7 +3,7 @@ export default function ProjectLoading() {
     <div className="flex flex-wrap w-full gap-y-5">
       <div
         role="status"
-        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-32"
+        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-28"
       >
         <div className="flex items-center space-x-2 w-11/12">
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-600 w-4/12"></div>
@@ -25,7 +25,7 @@ export default function ProjectLoading() {
       </div>
       <div
         role="status"
-        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-32"
+        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-28"
       >
         <div className="flex items-center space-x-2 w-11/12">
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-600 w-4/12"></div>
@@ -47,7 +47,7 @@ export default function ProjectLoading() {
       </div>
       <div
         role="status"
-        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-32"
+        className="flex flex-col justify-center animate-pulse dark:bg-black-charcoal shadow-[0_2px_16px_rgb(95_95_95_/_10%)] space-y-2.5 rounded-lg p-6 w-full h-28"
       >
         <div className="flex items-center space-x-2 w-11/12">
           <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-600 w-4/12"></div>

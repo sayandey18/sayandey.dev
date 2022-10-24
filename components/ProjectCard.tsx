@@ -24,7 +24,7 @@ export default function ProjectCard() {
       {data.repos.slice(0, 3).map((repo, index) => (
         <div
           key={index}
-          className="item flex flex-wrap transform hover:scale-[1.01] transition-all items-center rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-black-charcoal shadow-3xl p-6 md:h-32 gap-y-4 border-dashed border border-neutral-200 dark:border-neutral-700 w-full"
+          className="item flex flex-wrap transform hover:scale-[1.01] transition-all items-center rounded-lg text-gray-800 dark:text-gray-200 bg-white dark:bg-black-charcoal shadow-3xl p-6 md:h-28 gap-y-4 border-dashed border border-neutral-200 dark:border-neutral-700 w-full"
         >
           <div className="flex justify-center basis-full md:basis-1/5">
             <p className="font-bold sm:font-semibold">{repo.name}</p>
