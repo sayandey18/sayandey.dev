@@ -80,6 +80,7 @@ export default function Container(props) {
             <NavItem href="/" text="Home" />
             <NavItem href="/guestbook" text="Guestbook" />
             <NavItem href="/dashboard" text="Dashboard" />
+            <NavItem href="/resources" text="Resources" />
             <NavItem href="/blog" text="Blog" />
             <NavItem href="/snippets" text="Snippets" />
           </div>
