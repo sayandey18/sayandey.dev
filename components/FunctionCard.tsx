@@ -12,7 +12,7 @@ export default function FunctionCard({
   return (
     <Link href={`/snippets/${slug}`}>
       <a
-        className="border border-grey-200 dark:border-gray-800 rounded p-4 w-full bg-white dark:bg-gray-900"
+        className="border border-gray-200 rounded p-4 w-full bg-white dark:bg-black-charcoal dark:border-gray-700"
         {...rest}
       >
         <Image
