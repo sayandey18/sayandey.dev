@@ -20,7 +20,7 @@ const nextConfig = {
     return [
       {
         source: '/analytics',
-        destination: 'https://analytics.sayandey.dev',
+        destination: 'https://sayandey-analytics.vercel.app',
         permanent: true
       }
     ];

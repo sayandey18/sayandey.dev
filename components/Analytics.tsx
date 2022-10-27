@@ -7,8 +7,8 @@ export default function Analytics() {
         <Script
           async
           defer
-          data-website-id="6f7a6a64-bbae-48f5-812c-da19116ca3c0"
-          src="https://analytics.sayandey.dev/umami.js"
+          data-website-id="91fcf110-8189-4759-801e-f1a63d1eee08"
+          src="https://sayandey-analytics.vercel.app/umami.js"
         />
       )}
     </>
