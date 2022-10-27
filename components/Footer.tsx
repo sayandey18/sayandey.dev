@@ -69,7 +69,7 @@ export default function Footer() {
           </Link>
           <ExternalLink href="/feed.xml">Feed</ExternalLink>
           <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>
-          <ExternalLink href="https://analytics.sayandey.dev/share/heORd4RV/Sayan">
+          <ExternalLink href="https://sayandey-analytics.vercel.app/share/tK8CqsFT/Sayan">
             Analytics
           </ExternalLink>
         </div>
