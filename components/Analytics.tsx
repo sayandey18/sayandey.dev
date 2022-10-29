@@ -5,10 +5,8 @@ export default function Analytics() {
     <>
       {process.env.NODE_ENV === 'production' && (
         <Script
-          async
           defer
-          data-website-id="91fcf110-8189-4759-801e-f1a63d1eee08"
-          src="https://sayandey-analytics.vercel.app/umami.js"
+          src="https://analytics.sayandey.dev/ingress/115071f0-bcfb-4d71-a663-b1fba956a4c5/script.js"
         />
       )}
     </>
