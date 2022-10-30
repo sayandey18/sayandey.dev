@@ -5,8 +5,12 @@ export default function Analytics() {
     <>
       {process.env.NODE_ENV === 'production' && (
         <Script
+          async
           defer
-          src="https://analytics.sayandey.dev/ingress/115071f0-bcfb-4d71-a663-b1fba956a4c5/script.js"
+          data-host="https://sitetrack.space"
+          data-dnt="false"
+          src="https://sitetrack.space/js/script.js"
+          id="ZwSg9rf6GA"
         />
       )}
     </>
