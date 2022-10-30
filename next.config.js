@@ -20,7 +20,7 @@ const nextConfig = {
     return [
       {
         source: '/analytics',
-        destination: 'https://sitetrack.space/sayandey.dev',
+        destination: 'https://sitetrack.space',
         permanent: true
       }
     ];
