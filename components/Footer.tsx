@@ -67,11 +67,13 @@ export default function Footer() {
               Tweets
             </a>
           </Link>
+          <Link href="/certificates">
+            <a className="text-gray-400 hover:text-gray-500 transition">
+              Certificates
+            </a>
+          </Link>
           <ExternalLink href="/feed.xml">Feed</ExternalLink>
           <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>
-          <ExternalLink href="https://sayandey-analytics.vercel.app/share/tK8CqsFT/Sayan">
-            Analytics
-          </ExternalLink>
         </div>
 
         <div className="flex flex-col space-y-4">
