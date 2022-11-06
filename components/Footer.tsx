@@ -20,57 +20,71 @@ export default function Footer() {
       <NowPlaying />
       <div className="w-full max-w-[45rem] grid grid-cols-1 gap-4 pb-16 sm:grid-cols-4">
         <div className="flex flex-col space-y-4">
-          <Link href="/">
-            <a className="text-gray-400 hover:text-gray-500 transition">Home</a>
+          <Link
+            href="/"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Home
           </Link>
-          <Link href="/about">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              About
-            </a>
+          <Link
+            href="/about"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            About
           </Link>
-          <Link href="/projects">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Projects
-            </a>
+          <Link
+            href="/projects"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Projects
           </Link>
-          <Link href="/utilities">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Utilities
-            </a>
-          </Link>
-        </div>
-
-        <div className="flex flex-col space-y-4">
-          <Link href="/uses">
-            <a className="text-gray-400 hover:text-gray-500 transition">Uses</a>
-          </Link>
-          <Link href="/guestbook">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Guestbook
-            </a>
-          </Link>
-          <Link href="/snippets">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Snippets
-            </a>
-          </Link>
-          <Link href="/newsletter">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Newsletter
-            </a>
+          <Link
+            href="/utilities"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Utilities
           </Link>
         </div>
 
         <div className="flex flex-col space-y-4">
-          <Link href="/tweets">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Tweets
-            </a>
+          <Link
+            href="/uses"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Uses
           </Link>
-          <Link href="/certificates">
-            <a className="text-gray-400 hover:text-gray-500 transition">
-              Certificates
-            </a>
+          <Link
+            href="/guestbook"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Guestbook
+          </Link>
+          <Link
+            href="/snippets"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Snippets
+          </Link>
+          <Link
+            href="/newsletter"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Newsletter
+          </Link>
+        </div>
+
+        <div className="flex flex-col space-y-4">
+          <Link
+            href="/tweets"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Tweets
+          </Link>
+          <Link
+            href="/certificates"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Certificates
           </Link>
           <ExternalLink href="/feed.xml">Feed</ExternalLink>
           <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>

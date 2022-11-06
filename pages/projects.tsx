@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Container from 'components/Container';
@@ -21,8 +21,11 @@ export default function Projects() {
               I have built commercial projects as well as hobby projects. All
               projects are included here. I write about technology, blogging,
               wordpress etc. Checkout my{' '}
-              <Link href="/blog">
-                <a className="text-blue-600 font-semibold underline">blog</a>
+              <Link
+                href="/blog"
+                className="text-blue-600 font-semibold underline"
+              >
+                blog
               </Link>{' '}
               while you're here.
             </p>

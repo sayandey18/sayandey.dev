@@ -1,5 +1,5 @@
 import Container from 'components/Container';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 export default function Uses() {
   return (
@@ -12,8 +12,8 @@ export default function Uses() {
           My Gear
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          Here's what tech I'm currently using for coding, videos, blogging, 
-          and music. Most of these have been accumulated over the past few years.
+          Here's what tech I'm currently using for coding, videos, blogging, and
+          music. Most of these have been accumulated over the past few years.
         </p>
         {/* <Image
           className="rounded-lg"
@@ -34,9 +34,7 @@ export default function Uses() {
           </ul>
           <h3 id="coding">Coding</h3>
           <ul>
-            <li>
-              Editor: VSCode / Android Studio
-            </li>
+            <li>Editor: VSCode / Android Studio</li>
             <li>Theme: One Dark Pro</li>
             <li>Terminal: Hyper / Windows PowerShell</li>
           </ul>

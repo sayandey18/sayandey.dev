@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import Container from 'components/Container';
 import avatar from 'public/avatar.jpg';
@@ -16,19 +16,21 @@ export default function About() {
           <h2>Links</h2>
           <ul>
             <li>
-              Instagram: <a href="https://www.instagram.com/iam.sayandey">@iam.sayandey</a>
+              Instagram:{' '}
+              <a href="https://www.instagram.com/iam.sayandey">@iam.sayandey</a>
             </li>
             <li>
-              Facebook: <a href="https://www.facebook.com/sayan.dey9239">@sayan.dey9239</a>
+              Facebook:{' '}
+              <a href="https://www.facebook.com/sayan.dey9239">
+                @sayan.dey9239
+              </a>
             </li>
             <li>
               GitHub: <a href="https://github.com/sayandey18">@sayandey18</a>
             </li>
             <li>
               Website:{' '}
-              <Link href="https://sayandey.dev">
-                <a>https://sayandey.dev</a>
-              </Link>
+              <Link href="https://sayandey.dev">https://sayandey.dev</Link>
             </li>
             <li>
               LinkedIn:{' '}
@@ -39,29 +41,31 @@ export default function About() {
           </ul>
           <h2>Bio</h2>
           <h3>Job Title</h3>
-          <p>Sayan Dey is the Web Developer at{' '}
+          <p>
+            Sayan Dey is the Web Developer at{' '}
             <span className="font-semibold text-blue-500">Edology</span>
           </p>
 
           <h3>Long, Description</h3>
           <p>
-            I'm Sayan Dey, a self-taught passionate Web Developer from Kolkata, India. 
-            Currently working at Edology as Web Developer. I've been building stuff 
-            on the web that are responsive, fast, easy to use, and built with best practices. 
-            The main area of my expertise is building small and medium web apps, custom plugins, 
-            features, animations, and interactive coding layouts.
+            I'm Sayan Dey, a self-taught passionate Web Developer from Kolkata,
+            India. Currently working at Edology as Web Developer. I've been
+            building stuff on the web that are responsive, fast, easy to use,
+            and built with best practices. The main area of my expertise is
+            building small and medium web apps, custom plugins, features,
+            animations, and interactive coding layouts.
           </p>
 
           <h3>Short, Description</h3>
           <p>
-            Hey, I'm Sayan. I'm the Web Developer at Edology,
-            where my team helps businesses build the web faster.
+            Hey, I'm Sayan. I'm the Web Developer at Edology, where my team
+            helps businesses build the web faster.
           </p>
 
           <h3>Education</h3>
           <p>
-            Sayan Dey graduated from Indira Gandhi National Open University with a B.Sc in
-            Computer Science.
+            Sayan Dey graduated from Indira Gandhi National Open University with
+            a B.Sc in Computer Science.
           </p>
 
           <h2>Headshots</h2>
