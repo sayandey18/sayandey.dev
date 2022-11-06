@@ -2,7 +2,10 @@ import 'styles/global.css';
 
 import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
+import { Karla } from '@next/font/google';
 import Analytics from 'components/Analytics';
+
+const karla = Karla();
 
 export default function App({
   Component,
@@ -11,8 +14,10 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <ThemeProvider attribute="class">
-        <Analytics />
-        <Component {...pageProps} />
+        <main className={karla.className}>
+          <Component {...pageProps} />
+          <Analytics />
+        </main>
       </ThemeProvider>
     </SessionProvider>
   );

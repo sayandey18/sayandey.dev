@@ -13,8 +13,9 @@ const nextConfig = {
     ]
   },
   experimental: {
-    legacyBrowsers: false,
-    browsersListForSwc: true
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } }
+    ]
   },
   async redirects() {
     return [

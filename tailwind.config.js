@@ -27,7 +27,10 @@ module.exports = {
         '3xl': '0 2px 16px rgb(95 95 95 / 10%)'
       },
       fontFamily: {
-        sans: ['IBM Plex Sans', ...fontFamily.sans]
+        sans: ['Karla', ...fontFamily.sans]
+      },
+      fontWeight: {
+        mediumbold: 750
       },
       typography: (theme) => ({
         DEFAULT: {
