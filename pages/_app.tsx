@@ -2,8 +2,8 @@ import 'styles/global.css';
 
 import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
+import { Analytics } from '@vercel/analytics/react';
 import { Karla } from '@next/font/google';
-import Analytics from 'components/Analytics';
 
 const karla = Karla();
 
