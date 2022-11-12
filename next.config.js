@@ -17,12 +17,15 @@ const nextConfig = {
       { loader: '@next/font/google', options: { subsets: ['latin'] } }
     ]
   },
-  async redirects() {
+  async rewrites() {
     return [
       {
-        source: '/analytics',
-        destination: 'https://sitetrack.space',
-        permanent: true
+        source: '/bee.js',
+        destination: 'https://cdn.splitbee.io/sb.js'
+      },
+      {
+        source: '/_hive/:slug',
+        destination: 'https://hive.splitbee.io/:slug'
       }
     ];
   },
@@ -41,7 +44,7 @@ module.exports = nextConfig;
 // https://nextjs.org/docs/advanced-features/security-headers
 const ContentSecurityPolicy = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com sitetrack.space;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com;
     child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' 'unsafe-inline' *.googleapis.com;
     img-src * blob: data:;
