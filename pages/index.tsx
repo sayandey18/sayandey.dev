@@ -1,7 +1,6 @@
 import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { TbArrowWaveRightUp } from 'react-icons/tb';
 
 import Container from '../components/Container';
 import BlogPostCard from '../components/BlogPostCard';
