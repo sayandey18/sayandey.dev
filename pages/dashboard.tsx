@@ -1,4 +1,4 @@
-import Analytics from 'components/metrics/Analytics';
+import Reader from 'components/metrics/Reader';
 import Container from 'components/Container';
 import GitHub from 'components/metrics/Github';
 import Unsplash from 'components/metrics/Unsplash';
@@ -28,7 +28,7 @@ export default function Dashboard() {
           <YouTube />
         </div>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
-          <Analytics />
+          <Reader />
           <GitHub />
         </div>
         <h2 className="font-bold text-3xl tracking-tight mb-4 mt-16 text-black dark:text-white">
