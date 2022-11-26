@@ -1,9 +1,9 @@
-import { createConfig } from 'sanity';
+import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { media } from 'sanity-plugin-media';
 import { markdownSchema } from 'sanity-plugin-markdown';
 
-export default createConfig({
+export default defineConfig({
   name: 'default',
   title: 'sayandey.dev',
   projectId: 'q0pwph59',
