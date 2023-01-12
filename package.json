@@ -33,6 +33,7 @@
     "@tailwindcss/typography": "0.5.9",
     "classnames": "^2.3.2",
     "date-fns": "2.29.3",
+    "easymde": "^2.18.0",
     "googleapis": "110.0.0",
     "motion": "^10.15.5",
     "next": "13.1.1",
