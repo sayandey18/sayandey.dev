@@ -34,8 +34,8 @@ export default function About() {
             </li>
             <li>
               LinkedIn:{' '}
-              <a href="https://www.linkedin.com/in/iam-sayandey/">
-                @iam-sayandey
+              <a href="https://www.linkedin.com/in/sayandey18/">
+                @sayandey18
               </a>
             </li>
           </ul>
