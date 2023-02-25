@@ -1,60 +1,47 @@
-import { type NextRequest } from 'next/server';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = {
-  runtime: 'experimental-edge'
-};
-
-export default async function handler(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const email = searchParams.get('email');
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { email } = req.body;
 
   if (!email) {
-    return new Response(
-      JSON.stringify({
-        error: 'Email is required'
-      }),
-      {
-        status: 400,
-        headers: {
-          'content-type': 'application/json'
-        }
-      }
-    );
+    res.status(401).json({ error: 'Email is required' });
+    return;
   }
 
-  const result = await fetch('https://www.getrevue.co/api/v2/subscribers', {
-    method: 'POST',
-    headers: {
-      Authorization: `Token ${process.env.REVUE_API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ email })
-  });
-  const data = await result.json();
-
-  if (!result.ok) {
-    return new Response(
-      JSON.stringify({
-        error: data.error.email[0]
-      }),
+  const mailChimpData = {
+    members: [
       {
-        status: 500,
-        headers: {
-          'content-type': 'application/json'
-        }
+        email_address: email,
+        status: 'subscribed'
       }
-    );
-  }
+    ]
+  };
 
-  return new Response(
-    JSON.stringify({
-      error: ''
-    }),
-    {
-      status: 201,
+  try {
+    const apiServer = process.env.MAILCHIMP_API_SERVER;
+    const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+    const URL = `https://${apiServer}.api.mailchimp.com/3.0/lists/${audienceId}`;
+    const response = await fetch(URL, {
+      method: 'POST',
       headers: {
-        'content-type': 'application/json'
-      }
+        Authorization: `Token ${process.env.MAILCHIMP_API_KEY}`
+      },
+      body: JSON.stringify(mailChimpData)
+    });
+    const data = await response.json();
+
+    // Error handling.
+    if (data.errors[0]?.error) {
+      return res.status(401).json({ error: data.errors[0].error });
+    } else {
+      res.status(200).json({ success: true });
     }
-  );
+  } catch (e) {
+    res
+      .status(401)
+      .json({ error: 'Something went wrong, please try again later.' });
+  }
 }

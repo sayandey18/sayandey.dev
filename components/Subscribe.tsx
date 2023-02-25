@@ -51,7 +51,7 @@ export default function Subscribe() {
         <input
           ref={inputEl}
           aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
+          placeholder="sayan@sayandey.dev"
           type="email"
           autoComplete="email"
           required
@@ -69,16 +69,16 @@ export default function Subscribe() {
       ) : form.state === Form.Success ? (
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
-        <p className="text-sm text-gray-800 dark:text-gray-200">
+        <p className="text-sm text-center	text-gray-800 dark:text-gray-200">
           {`${
             subscriberCount > 0 ? subscriberCount.toLocaleString() : '-'
           } subscribers – `}
           <a
-            href="https://www.getrevue.co/profile/sayandey"
+            href="https://github.com/sayandey18/sayandey.dev/issues"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View all issues
+            View all GitHub issues
           </a>
         </p>
       )}

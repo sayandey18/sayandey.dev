@@ -1,16 +1,17 @@
 import { type NextRequest } from 'next/server';
 
-export const config = {
-  runtime: 'experimental-edge'
-};
-
 export default async function handler(req: NextRequest) {
-  const result = await fetch('https://www.getrevue.co/api/v2/subscribers', {
-    method: 'GET',
-    headers: {
-      Authorization: `Token ${process.env.REVUE_API_KEY}`
+  const apiServer = process.env.MAILCHIMP_API_SERVER;
+  const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+  const result = await fetch(
+    `https://${apiServer}.api.mailchimp.com/3.0/lists/${audienceId}/members`,
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Token ${process.env.MAILCHIMP_API_KEY}`
+      }
     }
-  });
+  );
 
   const data = await result.json();
 
@@ -26,7 +27,7 @@ export default async function handler(req: NextRequest) {
     );
   }
 
-  return new Response(JSON.stringify({ count: data.length }), {
+  return new Response(JSON.stringify({ count: data.total_items }), {
     status: 200,
     headers: {
       'content-type': 'application/json',
@@ -34,3 +35,7 @@ export default async function handler(req: NextRequest) {
     }
   });
 }
+
+export const config = {
+  runtime: 'experimental-edge'
+};
