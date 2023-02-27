@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { signIn, useSession } from 'next-auth/react';
 import useSWR, { useSWRConfig } from 'swr';
 
+import { guestbook } from '@prisma/client';
 import fetcher from 'lib/fetcher';
 import { Form, FormState } from 'lib/types';
 import SuccessMessage from 'components/SuccessMessage';
@@ -51,7 +52,7 @@ export default function Guestbook({ fallbackData }) {
   const { mutate } = useSWRConfig();
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const inputEl = useRef(null);
-  const { data: entries } = useSWR('/api/guestbook', fetcher, {
+  const { data: entries } = useSWR<guestbook[]>('/api/guestbook', fetcher, {
     fallbackData
   });
 
@@ -152,11 +153,9 @@ export default function Guestbook({ fallbackData }) {
         )}
       </div>
       <div className="mt-4 space-y-8">
-        <Suspense fallback={null}>
-          {entries?.map((entry) => (
-            <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
-          ))}
-        </Suspense>
+        {entries?.map((entry) => (
+          <GuestbookEntry key={entry.id.toString()} entry={entry} user={session?.user} />
+        ))}
       </div>
     </>
   );
