@@ -9,7 +9,7 @@ const nextConfig = {
       'pbs.twimg.com', // Twitter Profile Picture
       'cdn.sanity.io',
       'i.imgur.com',
-      'activity-graph.herokuapp.com'
+      'github-readme-streak-stats.herokuapp.com'
     ]
   },
   experimental: {

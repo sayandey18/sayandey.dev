@@ -36,15 +36,15 @@ export default function Projects() {
               href="https://github.com/sayandey18"
               target="_blank"
               rel="noreferrer noopener"
+              className="flex justify-center"
             >
               <Image
-                alt="sayan github graph"
-                className="border-4 border-gray-200 dark:border-white"
-                width={750}
-                height={300}
+                alt="sayan Github Streak"
+                width={500}
+                height={200}
                 unoptimized
                 priority
-                src={`https://activity-graph.herokuapp.com/graph?username=sayandey18&theme=react`}
+                src={`https://github-readme-streak-stats.herokuapp.com?user=sayandey18&theme=dark&border_radius=5&mode=weekly`}
               />
             </a>
           </div>
