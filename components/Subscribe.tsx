@@ -19,6 +19,9 @@ export default function Subscribe() {
 
     const email = inputEl.current.value;
     const res = await fetch(`/api/subscribe?email=${email}`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
       method: 'POST'
     });
 
@@ -71,7 +74,7 @@ export default function Subscribe() {
       ) : (
         <p className="text-sm text-center	text-gray-800 dark:text-gray-200">
           {`${
-            subscriberCount > 0 ? subscriberCount.toLocaleString() : '-'
+            subscriberCount ? subscriberCount.toLocaleString() : '-'
           } subscribers – `}
           <a
             href="https://github.com/sayandey18/sayandey.dev/issues"
