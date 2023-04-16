@@ -24,8 +24,8 @@ export default async function handler(
   }
 
   const mailData = {
-    from: 'Sayan Dey <sayan@bloggingmetrics.com>',
-    to: 'Mail TM <uyizznyysmouh@bugfoo.com>',
+    from: 'Sayan Dey <no-reply@sayandey.dev>',
+    to: 'Sayan Dey <sayan@sayandey.dev>',
     replyTo: email,
     subject: `Message from ${fname}`,
     text: `Name: ${fname} ${lname} | Email: ${email} | Phone: ${phone} | Message: ${message}`,
