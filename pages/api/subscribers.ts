@@ -1,5 +1,9 @@
 import { type NextRequest } from 'next/server';
 
+export const config = {
+  runtime: 'edge'
+};
+
 export default async function handler(req: NextRequest) {
   const apiServer = process.env.MAILCHIMP_API_SERVER;
   const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
@@ -35,7 +39,3 @@ export default async function handler(req: NextRequest) {
     }
   });
 }
-
-export const config = {
-  runtime: 'experimental-edge'
-};

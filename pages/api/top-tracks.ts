@@ -1,6 +1,10 @@
 import type { NextApiRequest } from 'next';
 import { getTopTracks } from 'lib/spotify';
 
+export const config = {
+  runtime: 'edge'
+};
+
 type ResponseTrackType = {
   artists: {
     name: string;
@@ -35,7 +39,3 @@ export default async function handler(req: NextApiRequest) {
     }
   });
 }
-
-export const config = {
-  runtime: 'experimental-edge'
-};
