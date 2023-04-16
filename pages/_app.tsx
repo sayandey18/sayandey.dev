@@ -5,7 +5,7 @@ import { SessionProvider } from 'next-auth/react';
 import { Karla } from '@next/font/google';
 import Analytics from 'components/Analytics';
 
-const karla = Karla();
+const karla = Karla({ subsets: ['latin'] });
 
 export default function App({
   Component,
