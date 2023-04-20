@@ -47,6 +47,7 @@ export default function Contact() {
             state: 'error',
             message: error
           });
+          toast.error('Message sent failed!');
           return;
         }
 
@@ -62,7 +63,8 @@ export default function Contact() {
           phone: '',
           message: ''
         });
-        toast.success('Message sent successfully!');
+
+        toast.success('Message sent successfully.');
       } catch (error) {
         setForm({
           state: 'error',

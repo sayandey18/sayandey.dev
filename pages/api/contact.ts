@@ -6,12 +6,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOSTNAME,
-    port: process.env.SMTP_PORT_NUMBER,
-    secure: process.env.SMTP_SECURE,
+    service: 'gmail',
     auth: {
-      user: process.env.SMTP_USERNAME,
-      pass: process.env.SMTP_PASSWORD
+      user: process.env.GMAIL_USERNAME,
+      pass: process.env.GMAIL_PASSWORD
     }
   });
 
@@ -24,7 +22,7 @@ export default async function handler(
   }
 
   const mailData = {
-    from: 'Sayan Dey <admin@sayandey.dev>',
+    from: 'Sayan Dey <sayanchamp14@gmail.com>',
     to: 'Sayan Dey <sayan@sayandey.dev>',
     replyTo: email,
     subject: `Message from ${fname}`,
