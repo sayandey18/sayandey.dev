@@ -5,14 +5,15 @@ export const config = {
 };
 
 export default async function handler(req: NextRequest) {
-  const apiServer = process.env.MAILCHIMP_API_SERVER;
-  const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+  const groupId = process.env.MAILERLITE_GROUP_ID;
   const result = await fetch(
-    `https://${apiServer}.api.mailchimp.com/3.0/lists/${audienceId}/members`,
+    `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers/count`,
     {
       method: 'GET',
       headers: {
-        Authorization: `Token ${process.env.MAILCHIMP_API_KEY}`
+        accept: 'application/json',
+        'X-MailerLite-ApiDocs': 'true',
+        'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY
       }
     }
   );
@@ -31,7 +32,7 @@ export default async function handler(req: NextRequest) {
     );
   }
 
-  return new Response(JSON.stringify({ count: data.total_items }), {
+  return new Response(JSON.stringify({ count: data.count }), {
     status: 200,
     headers: {
       'content-type': 'application/json',

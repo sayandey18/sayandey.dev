@@ -7,41 +7,29 @@ export default async function handler(
   const { email } = req.body;
 
   if (!email) {
-    res.status(401).json({ error: 'Email is required' });
-    return;
+    return res.status(400).json({ error: 'Email is required' });
   }
 
-  const mailChimpData = {
-    members: [
-      {
-        email_address: email,
-        status: 'subscribed'
-      }
-    ]
-  };
-
-  try {
-    const apiServer = process.env.MAILCHIMP_API_SERVER;
-    const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
-    const URL = `https://${apiServer}.api.mailchimp.com/3.0/lists/${audienceId}`;
-    const response = await fetch(URL, {
+  const groupId = process.env.MAILERLITE_GROUP_ID;
+  const result = await fetch(
+    `https://api.mailerlite.com/api/v2/groups/${groupId}/subscribers`,
+    {
       method: 'POST',
       headers: {
-        Authorization: `Token ${process.env.MAILCHIMP_API_KEY}`
+        accept: 'application/json',
+        'X-MailerLite-ApiDocs': 'true',
+        'Content-Type': 'application/json',
+        'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY
       },
-      body: JSON.stringify(mailChimpData)
-    });
-    const data = await response.json();
-
-    // Error handling.
-    if (data.errors[0]?.error) {
-      return res.status(401).json({ error: data.errors[0].error });
-    } else {
-      res.status(200).json({ success: true });
+      body: JSON.stringify({ email: email, resubscribe: false })
     }
-  } catch (e) {
-    res
-      .status(401)
-      .json({ error: 'Something went wrong, please try again later.' });
+  );
+
+  const data = await result.json();
+
+  if (!result.ok) {
+    return res.status(500).json({ error: data.error.email[0] });
   }
+
+  return res.status(201).json({ error: '' });
 }

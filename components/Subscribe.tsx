@@ -18,14 +18,16 @@ export default function Subscribe() {
     setForm({ state: Form.Loading });
 
     const email = inputEl.current.value;
-    const res = await fetch(`/api/subscribe?email=${email}`, {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      method: 'POST'
+      body: JSON.stringify({ email: email })
     });
 
     const { error } = await res.json();
+
     if (error) {
       setForm({
         state: Form.Error,
