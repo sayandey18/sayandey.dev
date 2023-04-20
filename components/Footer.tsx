@@ -33,16 +33,16 @@ export default function Footer() {
             About
           </Link>
           <Link
+            href="/contact"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Contact
+          </Link>
+          <Link
             href="/projects"
             className="text-gray-400 hover:text-gray-500 transition"
           >
             Projects
-          </Link>
-          <Link
-            href="/utilities"
-            className="text-gray-400 hover:text-gray-500 transition"
-          >
-            Utilities
           </Link>
         </div>
 
@@ -86,7 +86,12 @@ export default function Footer() {
           >
             Certificates
           </Link>
-          <ExternalLink href="/feed.xml">Feed</ExternalLink>
+          <Link
+            href="/utilities"
+            className="text-gray-400 hover:text-gray-500 transition"
+          >
+            Utilities
+          </Link>
           <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>
         </div>
 
