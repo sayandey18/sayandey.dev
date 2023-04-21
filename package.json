@@ -1,6 +1,6 @@
 {
   "name": "sayandey.dev",
-  "version": "5.2.1",
+  "version": "5.2.8",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -26,7 +26,7 @@
   "homepage": "https://sayandey.dev",
   "dependencies": {
     "@next/font": "^13.3.0",
-    "@prisma/client": "^4.12.0",
+    "@prisma/client": "^4.13.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/webhook": "^2.0.0",
     "@tailwindcss/typography": "0.5.9",
@@ -36,7 +36,7 @@
     "googleapis": "118.0.0",
     "motion": "^10.15.5",
     "next": "13.3.0",
-    "next-auth": "^4.22.0",
+    "next-auth": "^4.22.1",
     "next-mdx-remote": "^4.4.1",
     "next-sanity": "^4.1.7",
     "next-themes": "^0.2.1",
@@ -45,7 +45,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
-    "sanity": "^3.8.3",
+    "sanity": "^3.9.0",
     "sanity-plugin-markdown": "^4.1.0",
     "sanity-plugin-media": "^2.0.5",
     "styled-components": "^5.3.9",
@@ -54,14 +54,14 @@
     "use-delayed-render": "^0.0.7"
   },
   "devDependencies": {
-    "@types/react": "^18.0.35",
+    "@types/react": "^18.0.37",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "globby": "13.1.4 ",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.7",
-    "prisma": "4.12.0",
+    "prisma": "4.13.0",
     "reading-time": "^1.5.0",
     "rehype": "12.0.1",
     "rehype-autolink-headings": "6.1.1",
