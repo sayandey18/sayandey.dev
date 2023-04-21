@@ -102,7 +102,7 @@ export default function Footer() {
           <ExternalLink href="https://www.linkedin.com/in/iam-sayandey">
             LinkedIn
           </ExternalLink>
-          <ExternalLink href="https://twitter.com/wpblogmetrics">
+          <ExternalLink href="https://twitter.com/mrsayandey">
             Twitter
           </ExternalLink>
           <ExternalLink href="https://www.instagram.com/iam.sayandey/">
