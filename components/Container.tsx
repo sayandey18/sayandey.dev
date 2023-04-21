@@ -38,10 +38,27 @@ export default function Container(props) {
   const router = useRouter();
   const meta = {
     title: 'Sayan Dey – Creative Web Developer',
-    description: `Sayan Dey is a web developer, who loves modern web technologies, web stuff creation, and interactive coding layouts.`,
+    description: `Hi, I am Sayan Dey a self-taught enthusiastic web developer from Kolkata. I love JavaScript, modern web technologies, web stuff, and interactive coding layouts.`,
     image: 'https://sayandey.dev/static/images/sayan-banner.png',
     type: 'website',
     ...customMeta
+  };
+
+  const structuredData = {
+    '@context': 'https://schema.org/',
+    '@type': 'Person',
+    name: 'Sayan Dey',
+    url: 'https://sayandey.dev',
+    image: 'https://avatars.githubusercontent.com/u/60362336',
+    sameAs: [
+      'https://www.instagram.com/iam.sayandey',
+      'https://twitter.com/mrsayandey',
+      'https://www.instagram.com/iam.sayandey',
+      'https://www.linkedin.com/in/sayandey18/',
+      'https://github.com/sayandey18',
+      'https://sayandey.dev'
+    ],
+    jobTitle: 'Web Developer'
   };
 
   return (
@@ -61,13 +78,17 @@ export default function Container(props) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@wpblogmetrics" />
+        <meta name="twitter:site" content="@mrsayandey" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       <header className="sticky top-0 z-50 bg-frost-effect dark:bg-frost-effect-dark backdrop-blur-lg px-8">
         <nav className="flex items-center justify-between w-full relative max-w-[45rem] border-gray-200 dark:border-gray-700 mx-auto pt-4 pb-4 mb-6 sm:mb-16 text-gray-900 dark:text-gray-100">
