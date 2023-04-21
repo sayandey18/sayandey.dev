@@ -7,7 +7,7 @@ const createSitemap = (slugs) => `<?xml version="1.0" encoding="UTF-8"?>
           .map((slug) => {
             return `
                 <url>
-                    <loc>${`https://sayandey.dev/${slug}`}</loc>
+                  <loc>${`https://sayandey.dev/${slug}`}</loc>
                 </url>
             `;
           })
@@ -22,6 +22,7 @@ export async function getServerSideProps({ res }) {
       '',
       'about',
       'blog',
+      'contact',
       'dashboard',
       'projects',
       'utilities',
