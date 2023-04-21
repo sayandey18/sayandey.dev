@@ -8,6 +8,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
+    "postinstall": "prisma generate",
     "sanity-start": "sanity start",
     "sanity-deploy": "sanity deploy",
     "format": "prettier --write pages/** components/** lib/**"
