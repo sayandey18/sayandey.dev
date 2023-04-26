@@ -18,7 +18,7 @@ const certdata = {
         issuedBy: 'Great Learning',
         orgLogo: 'https://i.imgur.com/zU7Tp4E.png',
         pdfUrl:
-          'https://drive.google.com/file/d/1r2ne4jg3VzNGFTMg1G2xhzPH_3bHYjUa/view?usp=sharing'
+          'https://drive.google.com/file/d/1Wpkn4HP9s9XKePYg_nYWqn2c9Gq1s4Wb/view?usp=sharing'
       }
     ]
   }
