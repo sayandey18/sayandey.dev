@@ -21,7 +21,7 @@ export default function Home() {
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-2">
                 Developer Experience at{' '}
-                <span className="font-semibold">Edology</span>
+                <span className="font-semibold">Matrix Media</span>
               </h2>
               <svg
                 aria-hidden="true"

@@ -48,12 +48,15 @@ export default function Uses() {
             <li>PhonePe</li>
             <li>Groww</li>
             <li>CRED</li>
+            <li>Skype</li>
+            <li>Kite by Zerodha</li>
+            <li>Coin by Zerodha</li>
           </ul>
           <h3 id="other-tech">Other Tech</h3>
           <ul>
             <li>IQOO Neo 6</li>
             <li>Realme Watch 2 Pro</li>
-            <li>DEFY GravityZ</li>
+            <li>Oppo Enco Buds</li>
           </ul>
         </div>
       </article>

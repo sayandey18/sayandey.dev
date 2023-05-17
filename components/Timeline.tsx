@@ -77,9 +77,25 @@ export default function Timeline() {
 
   return (
     <>
+      <Year>2023</Year>
+      <ul>
+        <Step title="Joined Matrix Media Solutions Pvt. Ltd. 🥳">
+          I joined{' '}
+          <span className="text-blue-500 font-medium">
+            <a href="https://www.matrixnmedia.com" target="__blank">
+              Matrix Media
+            </a>
+          </span>{' '}
+          as a Senior Web Developer. I have been working in this role since May
+          2023 and I am responsible for the development and maintenance of
+          websites and web applications.
+        </Step>
+      </ul>
+      <Divider />
+
       <Year>2022</Year>
       <ul>
-        <Step title="Built and Deploy sayandey.dev 🎉">
+        <Step title="Built and Deploy sayandey.dev 🌐">
           Built and Deploy Open-Source{' '}
           <span className="text-blue-500 font-medium">
             <a
