@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { parseISO, format } from 'date-fns';
 import { PropsWithChildren, Suspense } from 'react';
-
 import Container from 'components/Container';
 import Subscribe from 'components/Subscribe';
 import ViewCounter from 'components/ViewCounter';
@@ -28,8 +27,8 @@ export default function BlogLayout({
           <div className="flex items-center">
             <Image
               alt="Sayan Dey"
-              height={24}
-              width={24}
+              height={25}
+              width={25}
               sizes="20vw"
               src="/avatar.jpg"
               className="rounded-full"
@@ -53,16 +52,6 @@ export default function BlogLayout({
             <Subscribe />
           </div>
           <div className="text-sm text-gray-700 dark:text-gray-300">
-            <a
-              href={`https://mobile.twitter.com/search?q=${encodeURIComponent(
-                `https://sayandey.dev/blog/${post.slug}`
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {'Discuss on Twitter'}
-            </a>
-            {` • `}
             <a
               href="https://github.com/sayandey18/sayandey.dev/issues"
               target="_blank"
