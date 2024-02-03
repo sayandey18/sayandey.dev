@@ -1,6 +1,7 @@
 import Reader from 'components/metrics/Reader';
 import Container from 'components/Container';
 import GitHub from 'components/metrics/Github';
+import Facebook from 'components/metrics/Facebook';
 import Unsplash from 'components/metrics/Unsplash';
 import YouTube from 'components/metrics/Youtube';
 import TopTracks from 'components/TopTracks';
@@ -25,6 +26,7 @@ export default function Dashboard() {
         </div>
         <div className="flex flex-col w-full">
           <Unsplash />
+          <Facebook />
           <YouTube />
         </div>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
