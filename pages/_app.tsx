@@ -1,8 +1,9 @@
 import 'styles/global.css';
+import '@code-hike/mdx/styles';
 
 import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
-import { Karla } from '@next/font/google';
+import { Karla } from 'next/font/google';
 import Analytics from 'components/Analytics';
 
 const karla = Karla({ subsets: ['latin'] });

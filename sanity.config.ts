@@ -1,5 +1,5 @@
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
+//import { deskTool } from 'sanity/desk';
 import { media } from 'sanity-plugin-media';
 import { markdownSchema } from 'sanity-plugin-markdown';
 
@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'sayandey.dev',
   projectId: 'q0pwph59',
   dataset: 'production',
-  plugins: [deskTool(), media(), markdownSchema()],
+  plugins: [media(), markdownSchema()],
   schema: {
     types: [
       {
