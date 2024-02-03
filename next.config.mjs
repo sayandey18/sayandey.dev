@@ -4,19 +4,34 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com', // Twitter Profile Picture
-      'cdn.sanity.io',
-      'i.imgur.com',
-      'github-readme-streak-stats.herokuapp.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-streak-stats.herokuapp.com',
+        pathname: '**'
+      },
     ]
   },
-//   experimental: {
-//     fontLoaders: [
-//       { loader: '@next/font/google', options: { subsets: ['latin'] } }
-//     ]
-//   },
   async rewrites() {
     return [
       {
