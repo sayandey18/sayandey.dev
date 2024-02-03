@@ -1,4 +1,4 @@
-![cover](https://raw.githubusercontent.com/sayandey18/sayandey18/main/img/sayandey-banner.png)
+![cover](https://raw.githubusercontent.com/sayandey18/sayandey.dev/master/public/static/images/github-banner.png)
 
 
 # sayandey.dev
