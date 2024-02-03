@@ -30,7 +30,6 @@ export async function getServerSideProps({ res }) {
       'guestbook',
       'newsletter',
       'certificates',
-      'tweets',
       'uses'
     ]
   ];

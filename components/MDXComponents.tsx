@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { CH } from '@code-hike/mdx/components';
 import ProsCard from 'components/ProsCard';
 import ConsCard from 'components/ConsCard';
 import Unsplash from 'components/metrics/Unsplash';
@@ -47,7 +48,8 @@ const MDXComponents = {
   ProsCard,
   Step,
   Unsplash,
-  YouTube
+  YouTube,
+  CH
 };
 
 export default MDXComponents;

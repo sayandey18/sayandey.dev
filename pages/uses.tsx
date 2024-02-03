@@ -1,5 +1,4 @@
 import Container from 'components/Container';
-import Image from 'next/image';
 
 export default function Uses() {
   return (
@@ -15,22 +14,17 @@ export default function Uses() {
           Here's what tech I'm currently using for coding, videos, blogging, and
           music. Most of these have been accumulated over the past few years.
         </p>
-        {/* <Image
-          className="rounded-lg"
-          alt={`My computer setup`}
-          src={`/static/images/setup.png`}
-          width={2164 / 2}
-          height={1546 / 2}
-          priority
-        /> */}
         <div className="prose dark:prose-dark w-full">
           <h3 id="computer-office">Computer / Office</h3>
           <ul>
+            <li>HP Pavilion EG2035TU Intel Core i5-1240P</li>
             <li>Intel Core i5 12400F Processor</li>
             <li>Asus TUF GeForce GTX 1660 Super</li>
-            <li>Acer Nitro 23.8&quot; Gaming Monitor</li>
-            <li>Cosmic Byte CB-GK-02 Gaming Keyboard</li>
+            <li>Acer Nitro 23.8 Inch Gaming Monitor</li>
             <li>Logitech G102 Gaming Mouse</li>
+            <li>Portronics Tode One Wireless Mouse</li>
+            <li>Cosmic Byte CB-GK-02 Gaming Keyboard</li>
+            <li>ANT Esports MK4500 Wireless Mechanical Keyboard</li>
           </ul>
           <h3 id="coding">Coding</h3>
           <ul>

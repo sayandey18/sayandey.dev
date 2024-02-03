@@ -7,8 +7,8 @@ export default function Track(track: Song & { ranking: number }) {
       <p className="text-sm font-bold text-gray-400 dark:text-gray-600 w-4">
         {track.ranking}
       </p>
-      <div className="flex justify-self-auto">
-        <div className="flex flex-col pl-3">
+      <div className="flex w-full">
+        <div className="flex flex-col pl-3 w-fit">
           <Image
             className="rounded-lg"
             src={track.cover}
@@ -19,7 +19,7 @@ export default function Track(track: Song & { ranking: number }) {
         </div>
         <div className="flex flex-col pl-3">
           <a
-            className="font-medium text-gray-900 dark:text-gray-100 hover:text-[#1bd760] hover:dark:text-[#1bd760] truncate w-60 sm:w-96 md:w-full"
+            className="font-medium text-gray-900 dark:text-gray-100 line-clamp-1 hover:text-[#1bd760] hover:dark:text-[#1bd760] w-60 sm:w-96 md:w-full"
             href={track.songUrl}
             target="_blank"
             rel="noopener noreferrer"

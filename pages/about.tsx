@@ -17,16 +17,33 @@ export default function About() {
           <ul>
             <li>
               Instagram:{' '}
-              <a href="https://www.instagram.com/iam.sayandey">@iam.sayandey</a>
-            </li>
-            <li>
-              Facebook:{' '}
-              <a href="https://www.facebook.com/sayan.dey9239">
-                @sayan.dey9239
+              <a
+                href="https://www.instagram.com/mr.sayandey18"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                @mr.sayandey18
               </a>
             </li>
             <li>
-              GitHub: <a href="https://github.com/sayandey18">@sayandey18</a>
+              Facebook:{' '}
+              <a
+                href="https://www.facebook.com/mr.sayandey18"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                @mr.sayandey18
+              </a>
+            </li>
+            <li>
+              GitHub:{' '}
+              <a
+                href="https://github.com/sayandey18"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                @sayandey18
+              </a>
             </li>
             <li>
               Website:{' '}
@@ -34,7 +51,11 @@ export default function About() {
             </li>
             <li>
               LinkedIn:{' '}
-              <a href="https://www.linkedin.com/in/sayandey18/">
+              <a
+                href="https://www.linkedin.com/in/sayandey18/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
                 @sayandey18
               </a>
             </li>
@@ -58,8 +79,8 @@ export default function About() {
 
           <h3>Short, Description</h3>
           <p>
-            Hey, I'm Sayan. I'm the Sr. Web Developer at Matrix Media, where my team
-            helps businesses build the web faster.
+            Hey, I'm Sayan. I'm the Sr. Web Developer at Matrix Media, where my
+            team helps businesses build the web faster.
           </p>
 
           <h3>Education</h3>

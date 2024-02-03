@@ -86,3 +86,8 @@ export type Unsplash = {
   downloads: number;
   views: number;
 };
+
+export type Facebook = {
+  friends: number;
+  posts: number;
+};

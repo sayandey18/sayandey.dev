@@ -1,12 +1,11 @@
 import Link from 'next/link';
-
 import NowPlaying from 'components/NowPlaying';
 
 const ExternalLink = ({ href, children }) => (
   <a
     className="text-gray-400 hover:text-gray-500 transition"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener noreferrer nofollow"
     href={href}
   >
     {children}
@@ -75,10 +74,10 @@ export default function Footer() {
 
         <div className="flex flex-col space-y-4">
           <Link
-            href="/tweets"
+            href="/blog"
             className="text-gray-400 hover:text-gray-500 transition"
           >
-            Tweets
+            Blogs
           </Link>
           <Link
             href="/certificates"
@@ -92,14 +91,20 @@ export default function Footer() {
           >
             Utilities
           </Link>
-          <ExternalLink href="/sitemap.xml">Sitemap</ExternalLink>
+          <Link
+            href="/sitemap.xml"
+            className="text-gray-400 hover:text-gray-500 transition"
+            target="_blank"
+          >
+            Sitemap
+          </Link>
         </div>
 
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://github.com/sayandey18">
             GitHub
           </ExternalLink>
-          <ExternalLink href="https://www.linkedin.com/in/iam-sayandey">
+          <ExternalLink href="https://www.linkedin.com/in/sayandey18/">
             LinkedIn
           </ExternalLink>
           <ExternalLink href="https://twitter.com/mrsayandey">
