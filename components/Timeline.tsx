@@ -82,7 +82,11 @@ export default function Timeline() {
         <Step title="Joined Matrix Media Solutions Pvt. Ltd. 🥳">
           I joined{' '}
           <span className="text-blue-500 font-medium">
-            <a href="https://www.matrixnmedia.com" target="__blank">
+            <a
+              href="https://www.matrixnmedia.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               Matrix Media
             </a>
           </span>{' '}
@@ -99,8 +103,9 @@ export default function Timeline() {
           Built and Deploy Open-Source{' '}
           <span className="text-blue-500 font-medium">
             <a
-              href="https://github.com/sayandey18/sayandey.dev"
-              target="__blank"
+              href="https://gitlab.com/sayandey18/sayandey.dev"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               Portfolio
             </a>
@@ -143,7 +148,11 @@ export default function Timeline() {
       <ul>
         <Step title="Published Bloggingmetrics">
           <span className="text-blue-500 font-medium">
-            <a href="https://bloggingmetrics.com" target="__blank">
+            <a
+              href="https://bloggingmetrics.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Bloggingmetrics
             </a>
           </span>{' '}
