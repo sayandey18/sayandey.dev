@@ -7,16 +7,20 @@
       "destination": "/sayandey-resume.pdf"
     },
     {
+      "source": "/terms",
+      "destination": "/terms-of-service.pdf"
+    },
+    {
+      "source": "/refund",
+      "destination": "/cancellation-refund.pdf"
+    },
+    {
       "source": "/youtube",
       "destination": "https://www.youtube.com/channel/UCGc7G2cwRBzasx0gCdfz8Lw"
     },
     {
       "source": "/live",
       "destination": "https://www.youtube.com/channel/UCGc7G2cwRBzasx0gCdfz8Lw/live"
-    },
-    {
-      "source": "/static/media/Sayan-CV.e29bee641afb61cbc7aa.pdf",
-      "destination": "/sayandey-resume.pdf"
     },
     {
       "source": "/newsletter/(.*)",
