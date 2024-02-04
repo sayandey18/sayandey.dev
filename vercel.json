@@ -8,11 +8,11 @@
     },
     {
       "source": "/terms",
-      "destination": "/terms-of-service.pdf"
+      "destination": "/static/pdfs/terms-of-service.pdf"
     },
     {
       "source": "/refund",
-      "destination": "/cancellation-refund.pdf"
+      "destination": "/static/pdfs/cancellation-refund.pdf"
     },
     {
       "source": "/youtube",
