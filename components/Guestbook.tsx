@@ -55,7 +55,7 @@ export default function Guestbook({ fallbackData }) {
   const { data: session } = useSession();
   const { mutate } = useSWRConfig();
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
-  const inputEl = useRef<HTMLInputElement | null>(null);
+  const inputEl = useRef(null);
   const { data: entries } = useSWR<guestbook[]>('/api/guestbook', fetcher, {
     fallbackData
   });
