@@ -9,7 +9,7 @@ import LoadingSpinner from 'components/LoadingSpinner';
 
 export default function Subscribe() {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
-  const inputEl = useRef(null);
+  const inputEl = useRef<HTMLInputElement | null>(null);
   const { data } = useSWR<Subscribers>('/api/subscribers', fetcher);
   const subscriberCount = new Number(data?.count);
 
@@ -17,7 +17,7 @@ export default function Subscribe() {
     e.preventDefault();
     setForm({ state: Form.Loading });
 
-    const email = inputEl.current.value;
+    const email = inputEl.current?.value;
     const res = await fetch('/api/subscribe', {
       method: 'POST',
       headers: {
@@ -36,7 +36,9 @@ export default function Subscribe() {
       return;
     }
 
-    inputEl.current.value = '';
+    if (inputEl.current) {
+      inputEl.current.value = '';
+    }
     setForm({
       state: Form.Success,
       message: `Hooray! You're now on the list.`
