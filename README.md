@@ -4,13 +4,13 @@
 # sayandey.dev
 
 - **Framework**: [Next.js](https://nextjs.org/)
-- **Database**: [PlanetScale](https://planetscale.com)
+- **Database**: [PlanetScale](https://planetscale.com/)
 - **ORM**: [Prisma](https://prisma.io/)
 - **Authentication**: [NextAuth.js](https://next-auth.js.org/)
-- **Deployment**: [Vercel](https://vercel.com)
+- **Deployment**: [Vercel](https://vercel.com/)
 - **CMS**: [Sanity](https://www.sanity.io/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Analytics**: [Umami](https://umami.is)
+- **Analytics**: [Splitbee](https://splitbee.io/)
 
 ## Overview
 
@@ -28,17 +28,17 @@
 
 ## Running Locally
 
-This application requires Node.js v16.13+.
+This application requires Node.js v20.xx.+
 
 ```bash
 git clone https://github.com/sayandey18/sayandey.dev.git
 cd sayandey.dev
-yarn
+yarn install
 yarn dev
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/ayandey18/sayandey.dev/blob/main/.env.example).
+Create a `.env` file similar to [`.env.example`](https://github.com/sayandey18/sayandey.dev/blob/production/.env.example).
 
 ## Cloning / Forking
 
-Please review the [license](https://github.com/sayandey18/sayandey.dev/blob/main/LICENSE.txt) and remove all of my personal information (resume, blog posts, images, etc.).
+Please review the [license](https://github.com/sayandey18/sayandey.dev/blob/production/LICENSE.txt) and remove all of my personal information (resume, blog posts, images, etc.).
