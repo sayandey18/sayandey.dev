@@ -64,9 +64,10 @@ export default function Guestbook({ fallbackData }) {
     e.preventDefault();
     setForm({ state: Form.Loading });
 
+    const inputValue = inputEl.current?.value;
     const res = await fetch('/api/guestbook', {
       body: JSON.stringify({
-        body: inputEl.current.value
+        body: inputValue
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -83,7 +84,9 @@ export default function Guestbook({ fallbackData }) {
       return;
     }
 
-    inputEl.current.value = '';
+    if (inputEl.current) {
+      inputEl.current.value = '';
+    }
     mutate('/api/guestbook');
     setForm({
       state: Form.Success,

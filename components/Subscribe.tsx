@@ -17,7 +17,7 @@ export default function Subscribe() {
     e.preventDefault();
     setForm({ state: Form.Loading });
 
-    const email = inputEl.current.value;
+    const email = inputEl.current?.value;
     const res = await fetch('/api/subscribe', {
       method: 'POST',
       headers: {
@@ -36,7 +36,9 @@ export default function Subscribe() {
       return;
     }
 
-    inputEl.current.value = '';
+    if (inputEl.current) {
+      inputEl.current.value = '';
+    }
     setForm({
       state: Form.Success,
       message: `Hooray! You're now on the list.`
