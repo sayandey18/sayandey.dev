@@ -41,6 +41,10 @@
     {
       "source": "/blog/resume",
       "destination": "/blog"
+    },
+    {
+      "source": "/api/timesheet",
+      "destination": "https://hook.us1.make.com/u6y84n2cuuedzttgsuo17aj36qv8trjx"
     }
   ]
 }
